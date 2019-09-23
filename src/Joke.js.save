@@ -1,0 +1,30 @@
+import React, { Component } from "react";
+
+Oclass Joke extends Component {
+ O constructor(props){
+  O  super(props);
+   B this.upVote = this.upVote.bind(this)
+    OBOOthis.downVote = this.downVote.bind(this)
+  }O
+O
+ OOBO upVote(){
+    tBtx:rsos.aajk,i:ui(,vts his.props.handleVote(this.props.id, 1)
+  } 
+
+  downVote(){
+    this.props.handleVote(this.props.id, -1)
+  }
+
+  render() {
+    return (
+      <div>
+        <p>{this.props.text}</p>
+        <i className="far fa-thumbs-up" onClick={this.upVote}></i>
+        <p>{this.props.votes} </p>
+        <i className="far fa-thumbs-down" onClick={this.downVote}></i>
+      </div>
+    );
+  }
+}
+
+export default Joke;
